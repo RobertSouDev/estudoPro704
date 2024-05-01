@@ -11,8 +11,8 @@ export  default function questao(){
 
     function  renderizarResposta(){
         if(questao){
-            return questao.respostas.map(resp => {
-                return <li>{resp}</li>
+            return questao.respostas.map((resp, i)=> {
+                return <li key={i}>{resp}</li>
             })
         }
         return false
